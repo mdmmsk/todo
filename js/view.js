@@ -1,5 +1,18 @@
+export let VERIABLE = {};
 
-function addTask() {
+function cloneForPaste() {
+	VERIABLE.CLONE = VERIABLE.BLOCKTASK[0].cloneNode(true);
+	VERIABLE.CLONE.classList.add('new__task');
+};
+
+function assignmentOfClickingRemoval() {
+	VERIABLE.DELETEBTN = document.body.getElementsByClassName('todo__deleteTask');
+	for (let key of VERIABLE.DELETEBTN) {
+		key.onclick = deleteTask;
+	};
+};
+
+export function addTask() {
 	cloneForPaste();
 	VERIABLE.PARENT_BLOCKINPUT.style.border = '';
 	VERIABLE.BLOCKTASKS = VERIABLE.PARENT_BLOCKINPUT.nextElementSibling;
@@ -9,15 +22,15 @@ function addTask() {
 	VERIABLE.BLOCKTASK.style = 'display:block';
 	VERIABLE.INPUTLINE.value = '';
 	assignmentOfClickingRemoval();
-};
+}
 
-function deleteTask(event) {
+export function deleteTask(event) {
 	let buttonDelete = event.currentTarget;
 	let parentTask = buttonDelete.parentElement.parentElement;
 	parentTask.remove();
-};
+}
 
-function getElementsByClassName(className){
+export function getElementsByClassName(className){
 	let res= document.body.getElementsByClassName(className);
 	return res;
-};
+}
