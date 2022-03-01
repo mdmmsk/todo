@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>To Do</title>
+	<link rel="stylesheet" href="css/style.css">
+	<meta http http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<script type="text/javascript" src=" https://code.jquery.com/jquery-1.11.2.js "></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="todo">
+			<div class="container">
+				<div class="todo__high">
+					<div class="todo__title">HIGH</div>
+					<div class='todo__input high__input'>
+						<form class="form">
+							<input type="text" name="inputTask" class="input" placeholder="Добавить важных дел" autocomplete="off">
+						</form>
+						<a href="#" class="input__btn"></a>
+					</div>
+					<div class="todo__tasks high__tasks">
+						<div class="todo__task">
+							<div class="task__items">
+								<input type="checkbox" name="highTask" id="Checkbox1">
+								<div class="checkbox"></div>
+								<label for="Checkbox1" class="task__text"></label>
+								<a href="#" class="todo__deleteTask"><span></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="todo__low">
+					<div class="todo__title">LOW</div>
+					<div class='todo__input low__input'>
+						<form class="form">
+							<input type="text" name="inputTask" class="input" placeholder="Добавить" autocomplete="off">
+						</form>
+						<a href="#" class="input__btn"></a>
+					</div>
+					<div class="todo__tasks low__tasks">
+						<div class="todo__task">
+							<div class="task__items">
+								<input type="checkbox" name="lowTask" id="Checkbox2">
+								<div class="checkbox"></div>
+								<label for="Checkbox2" class="task__text"></label>
+								<a href="#" class="todo__deleteTask"><span></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="module" src="/js/main.js"></script>
+</body>
+
+</html>

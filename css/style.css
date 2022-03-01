@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.wrapper {
+  font-family: "Roboto", sans-serif;
+}
+
+.todo {
+  background: #dee4ff;
+  border-radius: 6px;
+  max-width: 476px;
+  margin: 0 auto;
+  padding: 6px 0 10px 0;
+}
+
+.container {
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.todo__title {
+  font-size: 18px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.todo__input {
+  min-height: 45px;
+  max-height: 90px;
+  border-radius: 6px;
+  border: 1px solid #989898;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.todo__input a {
+  width: 20px;
+  height: 20px;
+  background: url("../../img/close-icon.svg") no-repeat 50%;
+  margin-right: 12px;
+}
+
+.todo__task {
+  margin-top: 8px;
+  min-height: 45px;
+  border-radius: 6px;
+  border: 1px solid #989898;
+  display: none;
+}
+
+.todo__task a span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("../../img/close-icon.svg") no-repeat center;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.todo__task input {
+  display: none;
+}
+
+.new__task {
+  display: block;
+}
+
+.input {
+  background: #dee4ff;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  margin-left: 12px;
+  width: 400px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #989898;
+}
+
+.task__text {
+  max-width: 370px;
+}
+
+.task__items {
+  padding: 10px 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
