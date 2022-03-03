@@ -17,6 +17,9 @@ export function addTask() {
 	VERIABLE.PARENT_BLOCKINPUT.style.border = '';
 	VERIABLE.BLOCKTASKS = VERIABLE.PARENT_BLOCKINPUT.nextElementSibling;
 	let Label = VERIABLE.CLONE.getElementsByTagName('label');
+	Label[0].onclick = changeStatus;
+	let divcheckbox = VERIABLE.CLONE.getElementsByClassName('checkbox');
+	divcheckbox[0].onclick = changeStatus;
 	Label[0].innerHTML = VERIABLE.INPUTLINE_VALUE;
 	VERIABLE.BLOCKTASKS.append(VERIABLE.CLONE);
 	VERIABLE.BLOCKTASK.style = 'display:block';
@@ -30,7 +33,21 @@ export function deleteTask(event) {
 	parentTask.remove();
 }
 
-export function getElementsByClassName(className){
-	let res= document.body.getElementsByClassName(className);
+export function getElementsByClassName(className) {
+	let res = document.body.getElementsByClassName(className);
 	return res;
+}
+
+function changeStatus(event) {
+	let element = event.currentTarget
+	let blockTodoTask = element.parentElement.parentElement;
+	blockTodoTask.classList.toggle('new__task2');
+	let div = document.createElement('div');
+	div.className = 'circle';
+	if (blockTodoTask.classList.contains("new__task2")) {
+		element.before(div)
+	} else {
+		let dc=blockTodoTask.getElementsByClassName('circle');
+		dc[0].remove();
+	}
 }

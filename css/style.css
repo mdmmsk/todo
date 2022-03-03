@@ -117,6 +117,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .todo__task {
+  position: relative;
   margin-top: 8px;
   min-height: 45px;
   border-radius: 6px;
@@ -141,6 +142,10 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
+.new__task2 {
+  background: #d7c6ff;
+}
+
 .input {
   background: #dee4ff;
   font-family: "Roboto", sans-serif;
@@ -150,10 +155,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .checkbox {
+  z-index: 2;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   border: 1px solid #989898;
+}
+
+.circle {
+  position: absolute;
+  z-index: 1;
+  top: 28%;
+  left: 14px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #a497c2;
 }
 
 .task__text {
